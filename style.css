@@ -1,0 +1,8 @@
+.title {
+    font-size: 28px;
+    padding-top: 18px;
+}
+
+body {
+    background-color: var(--tg-theme-bg-color);
+}
