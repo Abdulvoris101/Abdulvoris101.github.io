@@ -3,5 +3,5 @@ let user = document.getElementById('user');
 
 tg.expand();
 
-user.innerText = `${tg.initDataUnsafe.user.first_name} - FirstName`;
+user.innerText = `${tg.initDataUnsafe?.user?.username} - FirstName`;
 
