@@ -7,4 +7,4 @@ tg.expand()
 
 let usercard = document.getElementById("usercard")
 
-usercard.innerHTML = tg.backgroundColor
+usercard.innerHTML = tg.initData
