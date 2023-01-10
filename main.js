@@ -1,16 +1,17 @@
 let tg = window.Telegram.WebApp
 
-const queryString = window.location.pathname;
+const queryString = window.location.search;
 
 tg.expand()
 
 
+console.log(queryString);
 
 let usercard = document.getElementById("usercard")
 
-if (queryString == '/form') {
+if (queryString == '?page=form/') {
     usercard.innerHTML = 'FORM'
-} else if (queryString == '') {
+} else {
     usercard.innerHTML = 'HOME'
 }   
 
