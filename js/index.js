@@ -29,9 +29,10 @@ if (category) {
       // });
 
       html += category;
-      html += 'still';
 
   })
+  html += 'still';
+
   page.innerHTML = html;
 
 
