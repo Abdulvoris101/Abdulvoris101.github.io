@@ -12,28 +12,36 @@ let html = ''
 if (category) {
   let products = getCategoryProducts(category)
 
-  products.then(data => {
+  page.innerHTML = 'before'
 
-      // data.results.forEach(item => {
-      //   html += ejs.render(' <div class="col-6"> \
-      //         <div class="card" > \
-      //           <img src="<%= baseUrl %>/<%= item.image %>" class="card-img"> \
-      //           <div class="card-body"> \
-      //             <h5 class="card-title"> <%= item.name %> </h5> \
-      //             <h5 class="card-title">127 000 сум</h5> \
-      //             <a href="#" class="btn btn-success btn-sm w-100">Покупать</a> \
-      //           </div> \
-      //           </div>  \
-      //       </div>' , {item: item, baseUrl: baseUrl}
-      //     );
-      // });
+  products.then(data => {
+      page.innerHTML = 'after'
+
+
+      data.results.forEach(item => {
+        html += ejs.render(' <div class="col-6"> \
+              <div class="card" > \
+                <img src="<%= baseUrl %>/<%= item.image %>" class="card-img"> \
+                <div class="card-body"> \
+                  <h5 class="card-title"> <%= item.name %> </h5> \
+                  <h5 class="card-title">127 000 сум</h5> \
+                  <a href="#" class="btn btn-success btn-sm w-100">Покупать</a> \
+                </div> \
+                </div>  \
+            </div>' , {item: item, baseUrl: baseUrl}
+          );
+      });
 
       html += category;
+      html += data;
+
+      page.innerHTML += html;
 
   })
-  html += 'still';
+  
 
-  page.innerHTML = html;
+  
+
 
 
 
