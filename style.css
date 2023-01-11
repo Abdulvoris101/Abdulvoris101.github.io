@@ -7,9 +7,10 @@ body {
     background-color: var(--tg-theme-bg-color);
 }
 .container-own {
-    width: 500px;
+    width: 400px;
     padding: 10px 20px;
 }
+
 .card-img {
     margin-top: 10px;
     width: 120px !important;
