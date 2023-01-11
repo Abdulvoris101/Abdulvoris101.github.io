@@ -7,8 +7,8 @@ body {
     background-color: var(--tg-theme-bg-color);
 }
 .container-own {
-    width: 400px;
-    padding: 10px 20px;
+    width: 350px;
+    padding: 10px 5px;
 }
 
 .card-img {
