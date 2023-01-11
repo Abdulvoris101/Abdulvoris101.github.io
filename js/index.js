@@ -27,7 +27,7 @@ if (category) {
           );
       });
 
-      html += category
+      html += category;
 
       page.innerHTML = html;
 
