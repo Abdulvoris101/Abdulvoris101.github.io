@@ -21,7 +21,6 @@ body {
 .card {
     margin-bottom: 10px;
     border: 1px solid #e0e0e0 !important;
-    background: var(--tg-theme-bg-color) !important;
 }
 
 .card-title {
