@@ -4,8 +4,8 @@
 }
 
 body {
-    background: var(--tg-theme-bg-color);
-    color: var(--tg-theme-text-color);
+    background: var(--tg-theme-bg-color) !important;
+    color: var(--tg-theme-text-color) !important;
 }
 .container-own {
     max-width: 390px;
@@ -21,6 +21,7 @@ body {
 .card {
     margin-bottom: 10px;
     border: 1px solid #e0e0e0 !important;
+    background: var(--tg-theme-bg-color) !important;
 }
 
 .card-title {

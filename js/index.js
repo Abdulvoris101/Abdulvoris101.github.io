@@ -1,20 +1,42 @@
 import { tg } from './useTelegram.js'
 import { usercard, haveQueryString , page, queryString} from './dom.js'
-import { getCategoryProducts } from './request.js'
+import { getCategoryProducts, baseUrl } from './request.js'
 
-let html = '';
+tg.expand()
+
 
 let category = haveQueryString(queryString)
 
-if (category) {
-  page.innerHTML = category;
+let html = ''
 
-  getCategoryProducts(category)
+if (category) {
+  let products = getCategoryProducts(category)
+  products.then(data => {
+
+      data.results.forEach(item => {
+        html += ejs.render(' <div class="col-6"> \
+              <div class="card" > \
+                <img src="<%= baseUrl %>/<%= item.image %>" class="card-img"> \
+                <div class="card-body"> \
+                  <h5 class="card-title"> <%= item.name %> </h5> \
+                  <h5 class="card-title">127 000 сум</h5> \
+                  <a href="#" class="btn btn-success btn-sm w-100">Покупать</a> \
+                </div> \
+                </div>  \
+            </div>', {item: item, baseUrl: baseUrl}
+          );
+      });
+
+      page.innerHTML = html;
+
+
+  })
+
+
 } else {
     page.innerHTML = 'Not';
 }
 
-  // html += ejs.render('<h4><a  target="_blank"><%- text %></a></h4> <br>', {text: links[0]['text'] });
 
 
 
