@@ -7,7 +7,8 @@ let html = '';
 let category = haveQueryString(queryString)
 
 if (category) {
-  console.log(category);
+  page.innerHTML = category;
+
   getCategoryProducts(category)
 } else {
     page.innerHTML = 'Not';
