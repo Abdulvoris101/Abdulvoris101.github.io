@@ -7,7 +7,4 @@ export async function  getCategoryProducts(category_id) {
     let data = await resp.json();
 
     return data;
-    
-       
-       
 }   

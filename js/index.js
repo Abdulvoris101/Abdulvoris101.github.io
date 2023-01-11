@@ -23,7 +23,7 @@ if (category) {
                   <a href="#" class="btn btn-success btn-sm w-100">Покупать</a> \
                 </div> \
                 </div>  \
-            </div>', {item: item, baseUrl: baseUrl}
+            </div>' , {item: item, baseUrl: baseUrl}
           );
       });
 
