@@ -10,14 +10,13 @@ let category = haveQueryString(queryString)
 let html = ''
 
 if (category) {
-  let products = getCategoryProducts(category)
+  // let products = getCategoryProducts(category)
+  let url = `${baseUrl}/api/products/?category=${category}&page=1&page_size=4`
 
-  page.innerHTML = 'before'
-
-  products.then(data => {
-      page.innerHTML = 'after'
-
-
+  fetch(url)
+  .then(resp => resp.json())
+  .then(data => {
+        
       data.results.forEach(item => {
         html += ejs.render(' <div class="col-6"> \
               <div class="card" > \
@@ -38,7 +37,6 @@ if (category) {
       page.innerHTML += html;
 
   })
-  
 
   
 
