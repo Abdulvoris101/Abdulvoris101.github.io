@@ -11,7 +11,7 @@ let html = ''
 
 if (category) {
   let products = getCategoryProducts(category)
-  
+
   products.then(data => {
 
       data.results.forEach(item => {
@@ -29,6 +29,7 @@ if (category) {
       });
 
       html += category;
+      html += 'still';
 
       page.innerHTML = html;
   })
