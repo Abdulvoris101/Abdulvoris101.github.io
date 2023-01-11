@@ -4,16 +4,17 @@
 }
 
 body {
-    background-color: var(--tg-theme-bg-color);
+    background: var(--tg-theme-bg-color);
+    color: var(--tg-theme-text-color);
 }
 .container-own {
-    width: 300px;
+    max-width: 390px;
     padding: 10px 5px;
 }
 
 .card-img {
     margin-top: 10px;
-    width: 120px !important;
+    width: 80% !important;
     margin-left: auto;
     margin-right: auto;
 }
