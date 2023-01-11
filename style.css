@@ -6,3 +6,26 @@
 body {
     background-color: var(--tg-theme-bg-color);
 }
+.container-own {
+    width: 500px;
+    padding: 10px 20px;
+}
+.card-img {
+    margin-top: 10px;
+    width: 120px !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+.card {
+    margin-bottom: 10px;
+    border: 1px solid #e0e0e0 !important;
+}
+
+.card-title {
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.card-text {
+    font-size: 15px !important;
+}
